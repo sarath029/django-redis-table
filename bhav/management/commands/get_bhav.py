@@ -93,7 +93,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
 
-        logging.info("Calling get_bhav function : "+ str(datetime.now()))
+        logging.info("Calling Function at : "+ str(datetime.now()))
 
         bhav = Bhav()
 
@@ -111,7 +111,7 @@ class Command(BaseCommand):
                         redis_client.hset(key, col, data[col])
 
             redis_client.bgsave()
-            logging.info('Snapshot created')
+            logging.info('Snapshot Created')
             
         except: 
             logging.info('No data for the day')

@@ -3,10 +3,14 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 import requests
 
-import pandas as pd
 from datetime import datetime, timedelta
-
+import json
 import redis
+import logging
+import time
+
+logging.basicConfig(level = logging.INFO, filename = 'list_bhav.log')
+
 
 redis_client = redis.StrictRedis(
     host='localhost',
@@ -46,10 +50,15 @@ class BhavListView(APIView):
     def post(self, request):
         
         name = request.data.get('name')
-        
+
+        start_time = time.time()
+        logging.info("New Request :" + json.dumps(request.data))
+
         if name:
             data = self.list_data(name)
         else:
             data = self.list_data("")
+
+        logging.info("Response Time: " + str(time.time() - start_time))
 
         return Response(data)
