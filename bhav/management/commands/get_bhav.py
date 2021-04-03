@@ -97,8 +97,6 @@ class Command(BaseCommand):
 
         bhav = Bhav()
 
-        bhav = Bhav()
-
         try:
             bhav_df = bhav.get_bhav()
             logging.info(bhav_df)
