@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from bhav.views import BhavListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('bhav', BhavListView.as_view()),
 ]

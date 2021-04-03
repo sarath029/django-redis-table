@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bhav',
+    'rest_framework',
+    'kronos'
 ]
 
 MIDDLEWARE = [
@@ -105,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -118,3 +121,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+BHAV_URL = "https://www.bseindia.com/download/BhavCopy/Equity/EQ-##day##--##month##--##year##-_CSV.ZIP"

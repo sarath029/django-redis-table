@@ -7,3 +7,4 @@ db.sqlite3
 media
 **/migrations
 **/__pycache__
+zerodha_venv
