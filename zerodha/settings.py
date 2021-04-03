@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bhav',
     'rest_framework',
-    'kronos'
+    'kronos',
+    'frontend'
 ]
 
 MIDDLEWARE = [
@@ -123,3 +124,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 BHAV_URL = "https://www.bseindia.com/download/BhavCopy/Equity/EQ-##day##--##month##--##year##-_CSV.ZIP"
+
+
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'frontend/static/')
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
