@@ -16,7 +16,7 @@ redis_client = redis.StrictRedis(
 
 class BhavListView(APIView):
 
-    def get_data(self, name):
+    def list_data(self, name):
         
         data = []
         
@@ -33,7 +33,7 @@ class BhavListView(APIView):
 
             key_fields = key.decode("utf-8").split(':')
             
-            row_data['SC_CODE'] = key_fields[1]
+            row_data['SC_NAME'] = key_fields[1]
             row_data['DAY'] = key_fields[2]
             row_data['MONTH'] = key_fields[3]
             row_data['YEAR'] = key_fields[4]
@@ -46,6 +46,10 @@ class BhavListView(APIView):
     def post(self, request):
         
         name = request.data.get('name')
-        data = self.get_data("")
+        
+        if name:
+            data = self.list_data(name)
+        else:
+            data = self.list_data("")
 
         return Response(data)
