@@ -25,6 +25,10 @@ To run the project on the development server:
 ```
 $ python manage.py runserver
 ```
+To start the cron job:
+```
+$ python manage.py installtasks
+```
 
 [A Django settings file contains all the configuration of your Django installation.](https://docs.djangoproject.com/en/3.0/topics/settings/)
 
