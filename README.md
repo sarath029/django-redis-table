@@ -1,7 +1,15 @@
 # Zerodha Assignment
 This project includes following apps.
-* bhav - This app provides a cron job to capture Bhav data every day, and API is provided to access data stored in Redis.
-* frontend - Table to visualise data 
+* bhav 
+    - Downloads the equity bhavcopy zip at 18:00 IST for the current date.
+    - Extracts and parses the CSV file in it.
+    - Writes the records into Redis.
+    - API to access the data
+
+* frontend - Frontend with a search box that allows the stored entries to be searched by name and renders a table of results and optionally downloads the results as CSV
+
+##[DEMO](http://13.232.203.109/)
+
 
 ## Prerequisites
 
