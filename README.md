@@ -6,7 +6,9 @@ This project includes following apps.
     - Writes the records into Redis.
     - API to access the data
 
-* frontend - Frontend with a search box that allows the stored entries to be searched by name and renders a table of results and optionally downloads the results as CSV
+* frontend 
+    - Frontend with a search box that allows the stored entries to be searched by name 
+    - a table of results and optionally downloads the results as CSV
 
 ##[DEMO](http://13.232.203.109/)
 
