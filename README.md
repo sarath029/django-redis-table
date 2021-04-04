@@ -1,4 +1,7 @@
 # Zerodha Assignment
+[DEMO](http://13.232.203.109/)
+
+
 This project includes following apps.
 * bhav 
     - Downloads the equity bhavcopy zip at 18:00 IST for the current date.
@@ -10,7 +13,6 @@ This project includes following apps.
     - Frontend with a search box that allows the stored entries to be searched by name 
     - a table of results and optionally downloads the results as CSV
 
-##[DEMO](http://13.232.203.109/)
 
 
 ## Prerequisites
